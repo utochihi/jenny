@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @article.username %>
+</p>
+<p>
+  <strong>Tag:</strong>
+  <%= @article.tag %>
+</p>
+
+
+<% if @user %>
+<h3>User</h3>
+<p>
+  <strong>name:</strong>
+  <%= @user.name %>
+</p>
+<p>
+  <strong>sex:</strong>
+  <%= @user.sex %>
+</p>
+<p>
+  <strong>intro:</strong>
+  <%= @user.intro %>
+</p>
+<% else %>
+<p>すいません。。。</p>
+<% end %>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
